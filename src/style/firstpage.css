@@ -1,0 +1,16 @@
+@import "projectdescr.css";
+@import "slider.css";
+
+.FirstPage > .content {
+  margin-bottom: 4.063rem;
+}
+
+/* Tablet */
+@media screen and (min-width: 800px) {
+  .FirstPage > .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

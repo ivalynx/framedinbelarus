@@ -1,0 +1,48 @@
+@import "burger.css";
+
+.Header {
+  padding-top: 0.313rem;
+  padding-bottom: 0.313rem;
+  background-color: #020202;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.Header .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Header .content > * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.Header .logo-project {
+  color: #ffffff;
+  line-height: 160%;
+}
+
+.Lang .arrow {
+  position: relative;
+  top: -0.1rem;
+  margin-left: 0.2rem;
+}
+.Lang.open .arrow {
+  transform: rotate(180deg);
+  transition-property: transform;
+  transition-duration: 0.15s;
+}
+
+/* Tablet */
+@media screen and (min-width: 800px) {
+  .Header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1050px) {
+  .Header {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+}

@@ -1,0 +1,123 @@
+.Burger-button {
+  display: block;
+  width: 1.5rem;
+  height: 1.375rem;
+  cursor: pointer;
+}
+.Burger-button-item {
+  display: inherit;
+  width: 1.5rem;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.Burger-button-item:last-child {
+  margin-bottom: 0;
+}
+.Burger-menu {
+  display: none;
+}
+.Burger-menu-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8rem;
+}
+.Burger-menu-item {
+  width: fit-content;
+  margin-bottom: 0.8rem;
+}
+.Burger-menu-group:last-child,
+.Burger-menu-item:last-child {
+  margin-bottom: 0;
+}
+.Burger-menu-item.button {
+  color: #FFFFFF !important;
+}
+.Burger-checker:checked + .Header .Burger-button {
+  position: absolute;
+  z-index: 5;
+  top: 0.313rem;
+  right: 0.625rem;
+}
+.Burger-checker:checked + .Header .Burger-button-item {
+  color: #020202;
+  background-color: #020202;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  position: relative;
+}
+.Burger-checker:checked + .Header .Burger-button-item:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0.563rem;
+}
+.Burger-checker:checked + .Header .Burger-button-item:nth-child(2) {
+  display: none;
+}
+.Burger-checker:checked + .Header .Burger-button-item:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.Burger-checker:checked + .Header .Burger-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: 0.313rem;
+  padding-right: 0.625rem;
+  padding-bottom: 0.313rem;
+  padding-left: 0.625rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: #ffffff;
+}
+.Burger-checker:checked + .Header .Burger-menu-item {
+  color: #020202;
+  position: relative;
+  z-index: 4;
+}
+.Burger-checker:checked ~ .Content::after {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+  top: 0;
+}
+
+/* Tablet */
+@media screen and (min-width: 800px) { 
+  .Burger-button {
+    display: none;
+  }
+  .Burger-menu,
+  .Burger-menu-group {
+    display: inline-block;
+  }
+  .Burger-menu > *,
+  .Burger-menu-item {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+  }
+  .Burger-menu-item {
+    color: #ffffff;
+  }
+  .Burger-menu-group:last-child,
+  .Burger-menu-item:last-child {
+    margin-bottom: auto;
+    margin-right: 0;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1050px) {
+  .Burger-menu {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 14rem);
+  }
+}

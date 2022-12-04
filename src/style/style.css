@@ -1,0 +1,17 @@
+@import "fonts.css";
+@import "reset.css";
+@import "firstpage.css";
+@import "header.css";
+@import "footer.css";
+@import "template.css";
+@import "atoms.css";
+
+
+/* Tablet */
+@media screen and (min-width: 800px) {
+  
+}
+/* Desktop */
+@media screen and (min-width: 1050px) {
+  
+}

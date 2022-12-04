@@ -1,0 +1,49 @@
+.Content {
+  overflow: hidden;
+}
+
+.content {
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
+}
+
+.logo-project .firstSymbol {
+  font-family: 'AnticSlab', sans-serif;
+  font-size: 1.5rem;
+}
+.logo-project .text {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.25rem;
+}
+
+.Article,
+.FirstPage .Article {
+  padding-top: 2.875rem;
+  padding-bottom: 2.875rem;
+}
+
+@media screen and (max-width: 1049px) {
+  .Article .section {
+    margin-bottom: 1rem;
+  }
+  .Article .section:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1050px) {
+  .content {
+    width: 65.625rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .Article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .Article > * {
+    width: 43.81%;
+  }
+}
